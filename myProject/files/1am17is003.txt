@@ -1,0 +1,12 @@
+Student usn: 1am17is003
+Student Name: amar kharvi
+Sem: 6
+Sec: d
+Sub1: 7
+Sub2: 98
+Sub3: 69
+Sub4: 86
+Sub5: 986
+Sub6: 8
+Total: 6
+SGPA: 9

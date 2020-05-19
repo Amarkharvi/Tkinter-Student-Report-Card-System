@@ -1,0 +1,12 @@
+Student usn: 1am17is058
+Student Name: navanith
+Sem: 6
+Sec: 8
+Sub1: hg
+Sub2: g
+Sub3: jg
+Sub4: jg
+Sub5: 987
+Sub6: 65
+Total: 765
+SGPA: 5

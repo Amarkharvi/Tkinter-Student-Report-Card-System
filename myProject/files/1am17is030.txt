@@ -1,0 +1,12 @@
+Student usn: 1am17is030
+Student Name: jesi
+Sem: 6
+Sec: b
+Sub1: 99
+Sub2: 88
+Sub3: 98
+Sub4: 67
+Sub5: 65
+Sub6: 21
+Total: 789
+SGPA: 7.8
