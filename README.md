@@ -1,1 +1,1 @@
-# python_tkinter
+# Student ReportCard System using tkinter-python
