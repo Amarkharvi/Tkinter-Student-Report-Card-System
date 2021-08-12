@@ -12,7 +12,7 @@ def first():# first() function
         miniProject.vp_start_gui()
         
 sroot.geometry('500x200+500+300')
-spath = "/home/lonewolf/myProject/images/clg.png" #path of the image 
+spath = '/home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/' + "/images/clg.png" #path of the image 
 simg = ImageTk.PhotoImage(Image.open(spath)) 
 my = Label(sroot,image=simg) #image displayed in the label
 my.image = simg

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Report Card Gui
+Exec= bash -c "python /home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/reportCard_main.py"
+Icon= /home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/icons/report-card.png
+Type=Application
+Terminal=false
+Encoding=UTF-8

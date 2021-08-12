@@ -21,6 +21,7 @@ except ImportError:
 
 import miniProject_support
 import os.path
+import os
 
 def vp_start_gui():
     '''Starting point when module is the main routine.'''
@@ -308,13 +309,20 @@ class Toplevel1:
         self.Button1.configure(font="-family {Noto Serif} -size 8")
         self.Button1.configure(text='''Add Student''')
         from os.path import join as pjoin
+        
+        
+        
+        
+        
+        
         def writefiles(self):# function to write all entries into the file
+            
             usn=self.Entry1.get()
             if usn=="":
                 mb.showinfo(title="Data error",message="Some data are empty dear")
             else:
                 first=usn[0:10]+".txt"
-                path_to_file=pjoin("/","home","lonewolf","myProject","files",first)# put your own path here
+                path_to_file=pjoin('/home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/',"files",first)# put your own path here
                 with open(path_to_file,"w") as wr:
                     wr.write("Student usn: "+str(self.Entry1.get())+"\n"+"Student Name: "+str(self.Entry2.get())+"\n"+
                         "Sem: "+str(self.Entry3.get())+"\n"+"Sec: "+str(self.Entry4.get())+"\n"+"Sub1: "+str(self.Entry5.get())+"\n"+
@@ -324,6 +332,12 @@ class Toplevel1:
                     print("data stored")
                     mb.showinfo(title="Data Storing",message="Student Detail Added")
                     wr.close()
+       
+       
+       
+       
+       
+       
         self.Button1.configure(command=lambda: writefiles(self))
         
         self.Button2 = tk.Button(self.Labelframe2)
@@ -333,6 +347,12 @@ class Toplevel1:
         self.Button2.configure(borderwidth="3")
         self.Button2.configure(font="-family {Noto Serif} -size 8")
         self.Button2.configure(text='''Clear Details''')
+       
+       
+       
+       
+       
+       
         def clearDetails(self): # function to clear all fields of the student details.
                 self.Entry1.delete(0,tk.END)
                 self.Entry2.delete(0,tk.END)
@@ -346,7 +366,12 @@ class Toplevel1:
                 self.Entry10.delete(0,tk.END)
                 self.Entry11.delete(0,tk.END)
                 self.Entry12.delete(0,tk.END)
-         
+
+
+
+
+
+
         self.Button2.configure(command=lambda:clearDetails(self))
         self.Button3 = tk.Button(self.Labelframe2)
         self.Button3.place(relx=0.647, rely=0.353, height=30, width=108
@@ -358,8 +383,8 @@ class Toplevel1:
         def deleteStudent(self): #function to delete file
             import os
             delFile=self.Entry1.get()
-            if os.path.isfile('/home/lonewolf/myProject/files/'+delFile+'.txt')==True:# put your own path here
-                os.remove('/home/lonewolf/myProject/files/'+delFile+'.txt')# put your own path here
+            if os.path.isfile('/home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/','/files/'+delFile+'.txt')==True:# put your own path here
+                os.remove('/home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/files/'+delFile+'.txt')# put your own path here
                 print("data deleted")
                 mb.showinfo(title="Data Deletion",message="Data Deleted")
             else:                 
@@ -399,29 +424,45 @@ class Toplevel1:
         self.Button4.configure(borderwidth="3")
         self.Button4.configure(font="-family {Noto Serif} -size 10")
         self.Button4.configure(text='''View Student Data''')
+        
+        
+        
+        
+        
         def viewData(self): # function to show the files in the listbox 
             self.Listbox1.delete(0,tk.END)
-            flist=os.listdir('/home/lonewolf/myProject/files/')# put your own path here 
+            flist=os.listdir('/home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/files/')# put your own path here 
             for item in flist:
                 self.Listbox1.insert(tk.END,item)
+
+
+
+
+
+
 
         def showContent(event): # function to show the selected file into the text box    
             x=self.Listbox1.curselection()[0]
             file=self.Listbox1.get(x)
             from os.path import join as pjoin
-            pathfile=pjoin("/","home","lonewolf","myProject","files/"+file)# put your own path here
+            pathfile=pjoin('/home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/',"files/"+file)# put your own path here
             with open(pathfile,'r') as file:
                 file=file.read()
 
             self.Text1.delete('1.0',tk.END)
             self.Text1.insert(tk.END,file)
+       
+       
+       
+       
+       
         self.Listbox1.bind("<<ListboxSelect>>",showContent)       
         self.Button4.configure(command= lambda: viewData(self))
 
         self.Label14 = tk.Label(top)
         self.Label14.place(relx=0.471, rely=0.655, height=181, width=419)
         self.Label14.configure(activebackground="#f9f9f9")
-        photo_location = os.path.join(prog_location,"/home/lonewolf/myProject/images/clgback(1).png")#put your own path here
+        photo_location = os.path.join(prog_location,'/home/lonewolf/Documents/repo/Tkinter-Student-Report-Card-System/myProject/'+"/images/clgback(1).png")#put your own path here
         global _img0
         _img0 = tk.PhotoImage(file=photo_location)
         self.Label14.configure(image=_img0)

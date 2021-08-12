@@ -1,0 +1,12 @@
+Student usn: 123456789
+Student Name: abc
+Sem: 5
+Sec: a
+Sub1: 34
+Sub2: 32
+Sub3: 65
+Sub4: 90
+Sub5: 67
+Sub6: 34
+Total: 12345
+SGPA: 9.2
